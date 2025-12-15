@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Stock Dashboard</title>
+
+  <!-- INLINE CSS -->
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    h1, h2 {
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: white;
+      margin-right: 10px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #status {
+      margin-left: 12px;
+      font-weight: bold;
+      color: #22c55e;
+    }
+
+    #tickers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    #tickers > div {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 15px;
+      width: 150px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    #tickers > div:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #tickers strong {
+      font-size: 20px;
+      color: #38bdf8;
+    }
+
+    #tickers span {
+      color: #94a3b8;
+    }
+
+    #mySubs li {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 10px;
+      width: 200px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      list-style: none;
+    }
+
+    #mySubs span {
+      font-weight: bold;
+      color: #f8fafc;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Stock Dashboard</h1>
+
+  <div>
+    <input id="email" placeholder="your email" />
+    <button id="loginBtn">Login</button>
+    <span id="status">Disconnected</span>
+  </div>
+
+  <h2>Tickers</h2>
+  <div id="tickers"></div>
+
+  <h2>Your Subscriptions</h2>
+  <ul id="mySubs"></ul>
+
+  <h2>Activity Logs</h2>
+<ul id="activityLogs"></ul>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
